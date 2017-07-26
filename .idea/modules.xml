@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaDecoration.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaDecoration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaDecoration_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaDecoration_main.iml" group="JavaDecoration" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaDecoration_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaDecoration_test.iml" group="JavaDecoration" />
+    </modules>
+  </component>
+</project>
