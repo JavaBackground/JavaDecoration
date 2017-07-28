@@ -26,14 +26,20 @@ repositories {
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
 
+    // spring boot
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
     // JPA Data (We are going to use Repositories, Entities, Hibernate, etc...)
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
 
     // Use MySQL Connector-J
     compile 'mysql:mysql-connector-java'
+    // qiniu
+    compile 'com.qiniu:qiniu-java-sdk:7.2.+'
 
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
