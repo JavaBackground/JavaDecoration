@@ -1,4 +1,4 @@
-package com.haipeng.user;
+package com.haipeng.manager;
 
 public class ResponseSuperUser {
 

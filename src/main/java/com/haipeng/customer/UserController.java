@@ -1,9 +1,13 @@
 package com.haipeng.customer;
 
 import com.google.gson.Gson;
+import com.haipeng.helper.ResponseControllerHelper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import sun.rmi.runtime.Log;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -13,17 +17,21 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
+    public static Logger logger = LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     UserRepository userRepository;
 
     // json请求
-    @PostMapping(path = "/addSuperUser")
+    @RequestMapping(value = "/addUser",method = RequestMethod.POST)
     @ResponseBody
-    String addSuperUser(@RequestParam String json) {
+    String addSuperUser(@RequestParam(value = "UserModel",required = true) String json) {
+
+        logger.debug("json", "" + json);
         Gson gosn = new Gson();
-        User user = gosn.fromJson(json,User.class);
+        User user = gosn.fromJson(json, User.class);
         userRepository.save(user);
-        return "savedSuperUser";
+        return ResponseControllerHelper.success("success");
     }
 
     // 返回json,返回所有带密码

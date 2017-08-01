@@ -1,4 +1,4 @@
-package com.haipeng.user;
+package com.haipeng.manager;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
