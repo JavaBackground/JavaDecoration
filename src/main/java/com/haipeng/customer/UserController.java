@@ -14,7 +14,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/148124/user")
 public class UserController {
 
     public static Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -23,9 +23,9 @@ public class UserController {
     UserRepository userRepository;
 
     // json请求
-    @RequestMapping(value = "/addUser",method = RequestMethod.POST)
+    @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     @ResponseBody
-    String addSuperUser(@RequestParam(value = "UserModel",required = true) String json) {
+    String addSuperUser(@RequestParam(value = "UserModel", required = true) String json) {
 
         logger.debug("json", "" + json);
         Gson gosn = new Gson();

@@ -2,6 +2,7 @@ package com.haipeng;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
 public class Application {
@@ -11,4 +12,5 @@ public class Application {
 //        SpringApplication.run(MobileUploadController.class, args);
 //        SpringApplication.run(MainController.class, args);
     }
+
 }
