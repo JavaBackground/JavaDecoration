@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83f802eb-64ee-4ed3-820f-af5665dd299b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/haipeng/MyAppConfigurer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/haipeng/MyInterceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/haipeng/customer/UserShamController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0.1/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.0.1/fileContent/fileContent.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0.1/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0.1/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.0.1/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0.1/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.0.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/resources/application.properties" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/haipeng/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/haipeng/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/haipeng/customer/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/haipeng/customer/UserController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -149,8 +137,8 @@
       <file leaf-file-name="MyInterceptor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/haipeng/MyInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="156">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -994,7 +982,7 @@
       <workItem from="1501421482829" duration="687000" />
       <workItem from="1501477894452" duration="3815000" />
       <workItem from="1501636530941" duration="4844000" />
-      <workItem from="1501648868655" duration="10947000" />
+      <workItem from="1501648868655" duration="11019000" />
     </task>
     <task id="LOCAL-00001" summary="业务完善">
       <created>1501518247303</created>
@@ -1010,11 +998,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501582129668</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="业务完善3">
+      <created>1501667701294</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1501667701294</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54336000" />
+    <option name="totallyTimeSpent" value="54408000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1562,8 +1557,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/haipeng/MyInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="156">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
