@@ -12,7 +12,8 @@ public class MyAppConfigurer extends WebMvcConfigurerAdapter {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new MyInterceptor()).addPathPatterns("/user/**");
+        registry.addInterceptor(new MyUserRequestInterceptor()).addPathPatterns("/user/**");
+        registry.addInterceptor(new MyUserResponseInterceptor()).addPathPatterns("/148124/user/**");
         super.addInterceptors(registry);
     }
 }

@@ -2,6 +2,9 @@ package com.haipeng.customer;
 
 import com.google.gson.Gson;
 import com.haipeng.helper.ResponseControllerHelper;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+@Aspect
 @Controller
 @RequestMapping("/148124/user")
 public class UserController {
@@ -42,6 +46,7 @@ public class UserController {
     }
 
     // 返回json,返回的数据中没有密码比较安全
+    @Before("code = 200 data()")
     @GetMapping(path = "/getUserAll")
     @ResponseBody
     Iterable<ResponseUser> getAllSuperUser() {
@@ -72,6 +77,8 @@ public class UserController {
 
         return responseSuperUserIterable;
     }
+
+    @Pointcut
 
 
 }
