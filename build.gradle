@@ -16,8 +16,8 @@ buildscript {
 }
 
 jar {
-    baseName = "decoration-data-mysql"
-    version = "0.1.0"
+    baseName = "decoration-mysql"
+    version = "1.0"
 }
 
 
