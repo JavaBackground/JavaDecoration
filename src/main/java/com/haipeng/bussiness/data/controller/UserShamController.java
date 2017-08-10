@@ -1,7 +1,6 @@
-package com.haipeng.customer;
+package com.haipeng.bussiness.data.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.haipeng.bussiness.data.respository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 public class UserShamController {
 
-    public static Logger logger = LoggerFactory.getLogger(UserController.class);
+//    public static Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     UserRepository userRepository;

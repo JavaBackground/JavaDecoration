@@ -1,4 +1,4 @@
-package com.haipeng.manager;
+package com.haipeng.bussiness.data.model.response;
 
 public class ResponseSuperUser {
 

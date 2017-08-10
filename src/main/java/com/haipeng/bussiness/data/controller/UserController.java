@@ -1,16 +1,12 @@
-package com.haipeng.customer;
+package com.haipeng.bussiness.data.controller;
 
-import com.google.gson.Gson;
-import com.haipeng.helper.ResponseControllerHelper;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.haipeng.bussiness.data.service.UserService;
+import com.haipeng.bussiness.data.model.User;
+import com.haipeng.bussiness.data.model.response.ResponseUser;
+import com.haipeng.bussiness.data.respository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import sun.rmi.runtime.Log;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,7 +17,7 @@ import java.util.List;
 @RequestMapping("/148124/user")
 public class UserController implements UserService {
 
-    public static Logger logger = LoggerFactory.getLogger(UserController.class);
+//    public static Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     UserRepository userRepository;

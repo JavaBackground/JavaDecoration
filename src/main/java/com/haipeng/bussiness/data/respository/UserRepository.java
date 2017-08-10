@@ -1,5 +1,6 @@
-package com.haipeng.customer;
+package com.haipeng.bussiness.data.respository;
 
+import com.haipeng.bussiness.data.model.User;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<User,Long>{

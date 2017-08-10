@@ -1,4 +1,4 @@
-package com.haipeng.customer;
+package com.haipeng.bussiness.data.model.response;
 
 public class ResponseUser {
 

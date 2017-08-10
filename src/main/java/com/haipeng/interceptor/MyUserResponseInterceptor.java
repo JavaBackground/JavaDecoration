@@ -1,4 +1,4 @@
-package com.haipeng;
+package com.haipeng.interceptor;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

@@ -11,10 +11,11 @@ import org.springframework.stereotype.Component;
 @ComponentScan(basePackageClasses = Application.class, useDefaultFilters = true)
 public class ReturnUserAspect {
 
-    //        @Pointcut("execution(public * com.haipeng.customer..*.*(..))")
-//    @Pointcut("(execution(* com.haipeng.customer.UserService.*(..)))||(execution(* com.haipeng.customer.UserController.*(..)))")
-//    @Pointcut("execution(* com.haipeng.customer.UserService.getAllSuperUser())") //AOP就是动态绑定，需要方法是接口方法
-    @Pointcut("execution(* com.haipeng.customer.UserServiceImpl.clone())") // 无效的路径
+//    @Pointcut("execution(public * com.haipeng.bussiness..*.*(..))")
+//    @Pointcut("(execution(* com.haipeng.bussiness.data.service.UserService.*(..)))||(execution(* com.haipeng.bussiness.data.controller.UserController.*(..)))")
+//    @Pointcut("execution(* com.haipeng.bussiness.data.service.UserService.getAllSuperUser())") //AOP就是动态绑定，需要方法是接口方法
+
+    @Pointcut("execution(* com.haipeng.bussiness.data.service.implement.UserServiceImpl.clone())") // 无效的路径
     public void recordLog() {
 
     }

@@ -1,4 +1,4 @@
-package com.haipeng.data;
+package com.haipeng.utils.constant;
 
 import com.qiniu.util.Auth;
 import org.springframework.beans.factory.annotation.Autowired;

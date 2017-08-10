@@ -1,5 +1,8 @@
-package com.haipeng.manager;
+package com.haipeng.bussiness.data.controller;
 
+import com.haipeng.bussiness.data.model.SuperUser;
+import com.haipeng.bussiness.data.model.response.ResponseSuperUser;
+import com.haipeng.bussiness.data.respository.SuperUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
