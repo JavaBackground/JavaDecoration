@@ -1,9 +1,13 @@
 package com.haipeng.bussiness.data.controller;
 
+import com.google.gson.Gson;
 import com.haipeng.bussiness.data.service.UserService;
 import com.haipeng.bussiness.data.model.User;
 import com.haipeng.bussiness.data.model.response.ResponseUser;
 import com.haipeng.bussiness.data.respository.UserRepository;
+import com.haipeng.utils.ReturnUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +21,7 @@ import java.util.List;
 @RequestMapping("/148124/user")
 public class UserController implements UserService {
 
-//    public static Logger logger = LoggerFactory.getLogger(UserController.class);
+    public static Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     UserRepository userRepository;
@@ -27,13 +31,12 @@ public class UserController implements UserService {
     // json请求
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     @ResponseBody
-    String addSuperUser(@RequestParam(value = "UserModel", required = true) String json) {
-
-//        logger.debug("json", "" + json);
-//        Gson gosn = new Gson();
-//        User user = gosn.fromJson(json, User.class);
-//        userRepository.save(user);
-        return "";
+    String addUser(@RequestParam(value = "UserModel", required = true) String json) {
+        logger.debug("json", "" + json);
+        Gson gosn = new Gson();
+        User user = gosn.fromJson(json, User.class);
+        userRepository.save(user);
+        return ReturnUtils.success("saveUserSuccess");
     }
 
     // 返回json,返回所有带密码

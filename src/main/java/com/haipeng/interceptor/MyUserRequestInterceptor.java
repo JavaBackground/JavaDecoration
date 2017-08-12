@@ -14,8 +14,9 @@ public class MyUserRequestInterceptor implements HandlerInterceptor {
 
         // Controller方法调用之前
 //        response.sendRedirect("haipeng148124/"+request.getRequestURI());
-        HttpSession httpSession = request.getSession(true);
-            response.sendRedirect(request.getContextPath() + "/148124" + request.getRequestURI());
+//        HttpSession httpSession = request.getSession(true);
+//        response.sendRedirect(request.getContextPath() + "/148124" + request.getRequestURI());
+
 
         return true;// 只有返回true才会继续向下执行，返回false取消当前请求
     }
