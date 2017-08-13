@@ -11,7 +11,7 @@ public class Order {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
-    private Long  uniqueNumber; // 唯一编号
+    private long  uniqueNumber; // 唯一编号
 
     private String userName;
 

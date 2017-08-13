@@ -11,17 +11,17 @@ public class Master {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
-    private Long  uniqueNumber; // 唯一编号
+    private long  uniqueNumber; // 唯一编号
 
     private String name;
 
-    private String email;
-
     private String phone;
 
-    private String password;
+    private String email;
 
     private String address;
+
+    private String legalRepresentative;
 
     private String imageAvator; //头像
 
@@ -59,14 +59,6 @@ public class Master {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
 
@@ -108,5 +100,13 @@ public class Master {
 
     public void setImageUrls(String imageUrls) {
         this.imageUrls = imageUrls;
+    }
+
+    public String getLegalRepresentative() {
+        return legalRepresentative;
+    }
+
+    public void setLegalRepresentative(String legalRepresentative) {
+        this.legalRepresentative = legalRepresentative;
     }
 }

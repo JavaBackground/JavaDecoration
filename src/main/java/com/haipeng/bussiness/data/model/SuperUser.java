@@ -11,7 +11,7 @@ public class SuperUser {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    private String uniqueNumber;
+    private long uniqueNumber;
 
     private String name;
 
@@ -62,12 +62,11 @@ public class SuperUser {
         this.password = password;
     }
 
-    public String getUniqueNumber() {
+    public long getUniqueNumber() {
         return uniqueNumber;
     }
 
-    public void setUniqueNumber(String uniqueNumber) {
+    public void setUniqueNumber(long uniqueNumber) {
         this.uniqueNumber = uniqueNumber;
     }
-
 }

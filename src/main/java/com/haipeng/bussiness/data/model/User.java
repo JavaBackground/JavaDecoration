@@ -11,7 +11,7 @@ public class User {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    private String uniqueNumber;
+    private long uniqueNumber;
 
     private String name;
 
@@ -75,16 +75,12 @@ public class User {
         this.address = address;
     }
 
-    public String getUniqueNumber() {
+    public long getUniqueNumber() {
         return uniqueNumber;
     }
 
-    public void setUniqueNumber(String uniqueNumber) {
+    public void setUniqueNumber(long uniqueNumber) {
         this.uniqueNumber = uniqueNumber;
-    }
-
-    public String getImageAvator() {
-        return imageAvator;
     }
 
     public void setImageAvator(String imageAvator) {
@@ -98,5 +94,9 @@ public class User {
 
     public void setImageUrls(String imageUrls) {
         this.imageUrls = imageUrls;
+    }
+
+    public String getImageAvator() {
+        return imageAvator;
     }
 }

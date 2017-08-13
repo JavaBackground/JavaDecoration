@@ -11,15 +11,19 @@ public class Vendor {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
-    private Long  uniqueNumber; // 唯一编号
+    private long  uniqueNumber; // 唯一编号
 
     private String name;
 
     private String type;
 
+    private String phone;
+
     private String email;
 
-    private String phone;
+    private String address;
+
+    private String legalRepresentative;
 
     private String imageAvator; //头像
 
@@ -27,7 +31,6 @@ public class Vendor {
 
     private String imageUrls;// 其他一些照片
 
-    private String address;
 
     public Integer getId() {
         return id;
@@ -107,5 +110,13 @@ public class Vendor {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getLegalRepresentative() {
+        return legalRepresentative;
+    }
+
+    public void setLegalRepresentative(String legalRepresentative) {
+        this.legalRepresentative = legalRepresentative;
     }
 }

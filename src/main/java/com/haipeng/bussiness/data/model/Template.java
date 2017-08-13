@@ -6,18 +6,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity // This tells Hibernate to make a table out of this class ,auto create table;
-public class Template {
+public class Template {   // 推荐风格
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    private String uniqueNumber;
+    private long uniqueNumber;
 
     private String title;
 
-    private Master master;
+    private String masterUniqueNumber;
 
-    private Vendor vendor;
+    private String vendorUniqueNumber;
+
+    private String imageAvator;
 
     public Integer getId() {
         return id;
@@ -27,11 +29,11 @@ public class Template {
         this.id = id;
     }
 
-    public String getUniqueNumber() {
+    public long getUniqueNumber() {
         return uniqueNumber;
     }
 
-    public void setUniqueNumber(String uniqueNumber) {
+    public void setUniqueNumber(long uniqueNumber) {
         this.uniqueNumber = uniqueNumber;
     }
 
@@ -43,19 +45,27 @@ public class Template {
         this.title = title;
     }
 
-    public Master getMaster() {
-        return master;
+    public String getMasterUniqueNumber() {
+        return masterUniqueNumber;
     }
 
-    public void setMaster(Master master) {
-        this.master = master;
+    public void setMasterUniqueNumber(String masterUniqueNumber) {
+        this.masterUniqueNumber = masterUniqueNumber;
     }
 
-    public Vendor getVendor() {
-        return vendor;
+    public String getVendorUniqueNumber() {
+        return vendorUniqueNumber;
     }
 
-    public void setVendor(Vendor vendor) {
-        this.vendor = vendor;
+    public void setVendorUniqueNumber(String vendorUniqueNumber) {
+        this.vendorUniqueNumber = vendorUniqueNumber;
+    }
+
+    public String getImageAvator() {
+        return imageAvator;
+    }
+
+    public void setImageAvator(String imageAvator) {
+        this.imageAvator = imageAvator;
     }
 }
