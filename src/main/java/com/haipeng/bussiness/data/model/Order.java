@@ -13,6 +13,8 @@ public class Order {
 
     private long  uniqueNumber; // 唯一编号
 
+    private long  userUniqueNumber;
+
     private String userName;
 
     private String userPhone;
@@ -87,5 +89,17 @@ public class Order {
 
     public void setUniqueNumber(Long uniqueNumber) {
         this.uniqueNumber = uniqueNumber;
+    }
+
+    public void setUniqueNumber(long uniqueNumber) {
+        this.uniqueNumber = uniqueNumber;
+    }
+
+    public long getUserUniqueNumber() {
+        return userUniqueNumber;
+    }
+
+    public void setUserUniqueNumber(long userUniqueNumber) {
+        this.userUniqueNumber = userUniqueNumber;
     }
 }

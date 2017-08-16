@@ -2,6 +2,8 @@ package com.haipeng.bussiness.data.model.response;
 
 public class ResponseSuperUser {
 
+    private long uniqueNumber;
+
     private String name;
 
     private String email;
@@ -30,5 +32,13 @@ public class ResponseSuperUser {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public long getUniqueNumber() {
+        return uniqueNumber;
+    }
+
+    public void setUniqueNumber(long uniqueNumber) {
+        this.uniqueNumber = uniqueNumber;
     }
 }
