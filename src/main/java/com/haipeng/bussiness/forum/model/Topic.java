@@ -16,7 +16,7 @@ public class Topic {
     private String topicTitle;
     private String topicUserName;
     private String topicImage;
-    private List<TopicFollow> list;
+//    private List<TopicFollow> list;
 
     public Integer getId() {
         return id;
@@ -58,11 +58,11 @@ public class Topic {
         this.topicImage = topicImage;
     }
 
-    public List<TopicFollow> getList() {
-        return list;
-    }
-
-    public void setList(List<TopicFollow> list) {
-        this.list = list;
-    }
+//    public List<TopicFollow> getList() {
+//        return list;
+//    }
+//
+//    public void setList(List<TopicFollow> list) {
+//        this.list = list;
+//    }
 }

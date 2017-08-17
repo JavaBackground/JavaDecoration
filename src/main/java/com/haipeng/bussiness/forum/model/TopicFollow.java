@@ -11,10 +11,11 @@ public class TopicFollow {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
-    private Long  uniqueNumber; // 唯一编号
+    private long  uniqueNumber; // 唯一编号
     private String followTitle;
     private String followUserName;
     private String followImage;
+    private long   topicUniqueNumber;
 
     public Integer getId() {
         return id;
@@ -54,5 +55,17 @@ public class TopicFollow {
 
     public void setFollowImage(String followImage) {
         this.followImage = followImage;
+    }
+
+    public void setUniqueNumber(long uniqueNumber) {
+        this.uniqueNumber = uniqueNumber;
+    }
+
+    public long getTopicUniqueNumber() {
+        return topicUniqueNumber;
+    }
+
+    public void setTopicUniqueNumber(long topicUniqueNumber) {
+        this.topicUniqueNumber = topicUniqueNumber;
     }
 }
