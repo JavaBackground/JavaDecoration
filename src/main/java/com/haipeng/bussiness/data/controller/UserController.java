@@ -1,11 +1,12 @@
 package com.haipeng.bussiness.data.controller;
 
 import com.google.gson.Gson;
+import com.haipeng.bussiness.data.model.response.ReturnResult;
 import com.haipeng.bussiness.data.service.UserService;
 import com.haipeng.bussiness.data.model.User;
 import com.haipeng.bussiness.data.model.response.ResponseUser;
 import com.haipeng.bussiness.data.respository.UserRepository;
-import com.haipeng.utils.ReturnUtils;
+import com.haipeng.utils.constant.ReturnUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,12 +32,33 @@ public class UserController implements UserService {
     // json请求
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     @ResponseBody
-    String addUser(@RequestParam(value = "UserModel", required = true) String json) {
+    ReturnResult addUser(@RequestParam(value = "UserModel", required = true) String json) {
         logger.debug("json", "" + json);
         Gson gosn = new Gson();
         User user = gosn.fromJson(json, User.class);
         userRepository.save(user);
-        return ReturnUtils.success("saveUserSuccess");
+        return ReturnUtils.getResutlt("addUserSuccess","200");
+    }
+
+    // json请求
+    @RequestMapping(value = "/queryUser", method = RequestMethod.POST)
+    @ResponseBody
+    HashMap<String,Object> queryUser(@RequestParam(value = "userName", required = true) String userName
+            ,@RequestParam(value = "userPassword", required = true) String userPassword) {
+        HashMap<String, Object> hashMap = new HashMap<String, Object>();
+        hashMap.put("code", "200");
+        hashMap.put("data", convetUserToResponsUser(userRepository.findUserByNameAndPassword(userName,userPassword)));
+        return hashMap;
+    }
+
+    public ResponseUser convetUserToResponsUser(User user){
+        ResponseUser responseUser = new ResponseUser();
+        responseUser.setUniqueNumber(user.getUniqueNumber());
+        responseUser.setName(user.getName());
+        responseUser.setPhone(user.getPhone());
+        responseUser.setEmail(user.getEmail());
+        responseUser.setAddress(user.getAddress());
+        return responseUser;
     }
 
     // 返回json,返回所有带密码

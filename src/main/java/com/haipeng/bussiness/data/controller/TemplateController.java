@@ -1,11 +1,10 @@
 package com.haipeng.bussiness.data.controller;
 
 import com.google.gson.Gson;
-import com.haipeng.bussiness.data.model.Master;
 import com.haipeng.bussiness.data.model.Template;
-import com.haipeng.bussiness.data.respository.MasterRepository;
+import com.haipeng.bussiness.data.model.response.ReturnResult;
 import com.haipeng.bussiness.data.respository.TemplateRepository;
-import com.haipeng.utils.ReturnUtils;
+import com.haipeng.utils.constant.ReturnUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,12 +26,12 @@ public class TemplateController {
     // json请求
     @RequestMapping(value = "/addTemplate", method = RequestMethod.POST)
     @ResponseBody
-    String addTemplate(@RequestParam(value = "TemplateModel", required = true) String json) {
+    ReturnResult addTemplate(@RequestParam(value = "TemplateModel", required = true) String json) {
         logger.debug("json", "" + json);
         Gson gosn = new Gson();
         Template model = gosn.fromJson(json, Template.class);
         repository.save(model);
-        return ReturnUtils.success("saveTemplateSuccess");
+        return ReturnUtils.getResutlt("saveTemplateSuccess","200");
     }
 
     // 返回json,返回所有带密码

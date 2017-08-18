@@ -1,11 +1,10 @@
 package com.haipeng.bussiness.data.controller;
 
 import com.google.gson.Gson;
-import com.haipeng.bussiness.data.model.Master;
 import com.haipeng.bussiness.data.model.Vendor;
-import com.haipeng.bussiness.data.respository.MasterRepository;
+import com.haipeng.bussiness.data.model.response.ReturnResult;
 import com.haipeng.bussiness.data.respository.VendorRepository;
-import com.haipeng.utils.ReturnUtils;
+import com.haipeng.utils.constant.ReturnUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,12 +27,12 @@ public class VendorController{
     // json请求
     @RequestMapping(value = "/addVendor", method = RequestMethod.POST)
     @ResponseBody
-    String addMaster(@RequestParam(value = "VendorModel", required = true) String json) {
+    ReturnResult addMaster(@RequestParam(value = "VendorModel", required = true) String json) {
         logger.debug("json", "" + json);
         Gson gosn = new Gson();
         Vendor model = gosn.fromJson(json, Vendor.class);
         repository.save(model);
-        return ReturnUtils.success("saveVendorSuccess");
+        return ReturnUtils.getResutlt("saveVendorSuccess","200");
     }
 
     // 返回json,返回所有带密码
