@@ -41,14 +41,33 @@ public class UserController implements UserService {
     }
 
     // json请求
+//    @RequestMapping(value = "/queryUser", method = RequestMethod.POST)
+//    @ResponseBody
+//    HashMap<String,Object> queryUser(@RequestParam(value = "UserName", required = true) String userName
+//            ,@RequestParam(value = "UserPassword", required = true) String userPassword) {
+//        HashMap<String, Object> hashMap = new HashMap<String, Object>();
+//        hashMap.put("code", "200");
+//        hashMap.put("data", convetUserToResponsUser(userRepository.findUserByNameAndPassword(userName,userPassword)));
+//        return hashMap;
+//    }
+
     @RequestMapping(value = "/queryUser", method = RequestMethod.POST)
     @ResponseBody
-    HashMap<String,Object> queryUser(@RequestParam(value = "userName", required = true) String userName
-            ,@RequestParam(value = "userPassword", required = true) String userPassword) {
-        HashMap<String, Object> hashMap = new HashMap<String, Object>();
-        hashMap.put("code", "200");
-        hashMap.put("data", convetUserToResponsUser(userRepository.findUserByNameAndPassword(userName,userPassword)));
-        return hashMap;
+    ResponseUser queryUser(@RequestParam(value = "UserName", required = true) String userName
+            ,@RequestParam(value = "UserPassword", required = true) String userPassword) {
+//        HashMap<String, Object> hashMap = new HashMap<String, Object>();
+//        hashMap.put("code", "200");
+//        hashMap.put("data", convetUserToResponsUser(userRepository.findUserByNameAndPassword(userName,userPassword)));
+        return convetUserToResponsUser(userRepository.findUserByNameAndPassword(userName,userPassword));
+    }
+
+    @RequestMapping(value = "/queryUserByUniqueNumber", method = RequestMethod.POST)
+    @ResponseBody
+    ResponseUser queryUser(@RequestParam(value = "UserUniqueNumber", required = true) long uniqueNumber) {
+//        HashMap<String, Object> hashMap = new HashMap<String, Object>();
+//        hashMap.put("code", "200");
+//        hashMap.put("data", convetUserToResponsUser(userRepository.findUserByNameAndPassword(userName,userPassword)));
+        return convetUserToResponsUser(userRepository.findUserUserUniqueNumber(uniqueNumber));
     }
 
     public ResponseUser convetUserToResponsUser(User user){
