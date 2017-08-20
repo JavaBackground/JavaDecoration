@@ -1,9 +1,9 @@
 package com.haipeng.bussiness.data.controller;
 
 import com.google.gson.Gson;
-import com.haipeng.bussiness.data.model.Order;
+import com.haipeng.bussiness.data.model.UserOrder;
 import com.haipeng.bussiness.data.model.response.ReturnResult;
-import com.haipeng.bussiness.data.respository.OrderRepository;
+import com.haipeng.bussiness.data.respository.UserOrderRepository;
 import com.haipeng.utils.constant.ReturnUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +20,7 @@ public class OrderController{
     public static Logger logger = LoggerFactory.getLogger(OrderController.class);
 
     @Autowired
-    OrderRepository repository;
+    UserOrderRepository repository;
 
 
     // json请求
@@ -29,7 +29,7 @@ public class OrderController{
     ReturnResult addOrder(@RequestParam(value = "OrderModel", required = true) String json) {
         logger.debug("json", "" + json);
         Gson gosn = new Gson();
-        Order model = gosn.fromJson(json, Order.class);
+        UserOrder model = gosn.fromJson(json, UserOrder.class);
         repository.save(model);
         return ReturnUtils.getResutlt("saveOrderSuccess","200");
     }

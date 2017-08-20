@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Order {
+public class UserOrder {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
@@ -21,11 +21,15 @@ public class Order {
 
     private String userAdress;
 
+    private String userEmail;
+
     private String decorationArea;
 
     private String decorationStyle;
 
     private String decorationRequire;
+
+    private String imageAvator;
 
     public Integer getId() {
         return id;
@@ -33,6 +37,22 @@ public class Order {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public long getUniqueNumber() {
+        return uniqueNumber;
+    }
+
+    public void setUniqueNumber(long uniqueNumber) {
+        this.uniqueNumber = uniqueNumber;
+    }
+
+    public long getUserUniqueNumber() {
+        return userUniqueNumber;
+    }
+
+    public void setUserUniqueNumber(long userUniqueNumber) {
+        this.userUniqueNumber = userUniqueNumber;
     }
 
     public String getUserName() {
@@ -59,6 +79,14 @@ public class Order {
         this.userAdress = userAdress;
     }
 
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
     public String getDecorationArea() {
         return decorationArea;
     }
@@ -83,23 +111,11 @@ public class Order {
         this.decorationRequire = decorationRequire;
     }
 
-    public Long getUniqueNumber() {
-        return uniqueNumber;
+    public String getImageAvator() {
+        return imageAvator;
     }
 
-    public void setUniqueNumber(Long uniqueNumber) {
-        this.uniqueNumber = uniqueNumber;
-    }
-
-    public void setUniqueNumber(long uniqueNumber) {
-        this.uniqueNumber = uniqueNumber;
-    }
-
-    public long getUserUniqueNumber() {
-        return userUniqueNumber;
-    }
-
-    public void setUserUniqueNumber(long userUniqueNumber) {
-        this.userUniqueNumber = userUniqueNumber;
+    public void setImageAvator(String imageAvator) {
+        this.imageAvator = imageAvator;
     }
 }
