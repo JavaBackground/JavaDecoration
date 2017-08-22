@@ -11,7 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 @Controller
 @RequestMapping("/order")
@@ -33,6 +35,24 @@ public class OrderController{
         repository.save(model);
         return ReturnUtils.getResutlt("saveOrderSuccess","200");
     }
+
+
+    @RequestMapping(value = "/getOrderByOrderUniqueNumber", method = RequestMethod.POST)
+    @ResponseBody
+    UserOrder getOrderByUniqueNumber(@RequestParam(value = "OrderUniqueNumber", required = true) long uniquNumber) {
+        UserOrder order = new UserOrder();
+        order = repository.getOrderByUniqueNumber(uniquNumber);
+        return order;
+    }
+
+    @RequestMapping(value = "/getOrdersByUserUniqueNumber", method = RequestMethod.POST)
+    @ResponseBody
+    List<UserOrder> getOrdersByUserUniqueNumber(@RequestParam(value = "UserUniqueNumber", required = true) long userUniqueNumber) {
+        List<UserOrder> orders = new ArrayList<UserOrder>();
+        orders = repository.getOrdersByUserUniqueNumnber(userUniqueNumber);
+        return orders;
+    }
+
 
     // 返回json,返回所有带密码
 //    @GetMapping(path = "/getUserAllRoot")
