@@ -8,6 +8,6 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface MasterRepository extends CrudRepository<Master,Long>{
 
-    @Query(value = "select m.* from master m where m.unique_number =?1",nativeQuery = true)
+    @Query(value = "select m.* from master m where m.unique_number =?1 limit 0,1",nativeQuery = true)
     Master getMasterByUniqueNumber(long uniqueNumber);
 }

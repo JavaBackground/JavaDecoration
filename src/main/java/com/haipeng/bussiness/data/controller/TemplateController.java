@@ -35,7 +35,7 @@ public class TemplateController {
         Gson gosn = new Gson();
         Template model = gosn.fromJson(json, Template.class);
         repository.save(model);
-        return ReturnUtils.getResutlt("saveTemplateSuccess","200");
+        return ReturnUtils.getResutlt("saveTemplateSuccess", "200");
     }
 
     @RequestMapping(value = "/queryTemplateByUniqueNumber", method = RequestMethod.POST)
@@ -44,11 +44,8 @@ public class TemplateController {
 
         logger.debug("TemplateUniqueNumber", "" + uniqueNumber);
 
-        if (null == repository.getTemplateByUniqueNumber(uniqueNumber)) {
-            return new Template();
-        } else {
-            return repository.getTemplateByUniqueNumber(uniqueNumber);
-        }
+        return repository.getTemplateByUniqueNumber(uniqueNumber);
+
     }
 
     @GetMapping(path = "/queryAllTemplate")
@@ -57,7 +54,7 @@ public class TemplateController {
 
         List<Template> list = new ArrayList<Template>();
         Iterator<Template> iterator = repository.findAll().iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             list.add(iterator.next());
         }
         return list;

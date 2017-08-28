@@ -8,6 +8,6 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface TemplateRepository extends CrudRepository<Template,Long>{
 
-    @Query(value = "select t.* from template v where t.unique_number =?1",nativeQuery = true)
+    @Query(value = "select t.* from template t where t.unique_number =?1",nativeQuery = true)
     Template getTemplateByUniqueNumber(long uniqueNumber);
 }
