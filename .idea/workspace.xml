@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83f802eb-64ee-4ed3-820f-af5665dd299b" name="Default" comment="master is ok">
+    <list default="true" id="83f802eb-64ee-4ed3-820f-af5665dd299b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/haipeng/bussiness/data/controller/TemplateController.java" afterPath="$PROJECT_DIR$/src/main/java/com/haipeng/bussiness/data/controller/TemplateController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/haipeng/bussiness/data/respository/MasterRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/haipeng/bussiness/data/respository/MasterRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/haipeng/bussiness/data/respository/TemplateRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/haipeng/bussiness/data/respository/TemplateRepository.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -887,7 +884,7 @@
       <workItem from="1503494403392" duration="4950000" />
       <workItem from="1503585980299" duration="1195000" />
       <workItem from="1503809665744" duration="13131000" />
-      <workItem from="1503928477923" duration="7129000" />
+      <workItem from="1503928477923" duration="7175000" />
     </task>
     <task id="LOCAL-00001" summary="业务完善">
       <created>1501518247303</created>
@@ -966,11 +963,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503848376720</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="template is ok,next is recommend">
+      <created>1503940051675</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1503940051675</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131675000" />
+    <option name="totallyTimeSpent" value="131721000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1080,7 +1084,8 @@
     <MESSAGE value="add order interface.(tianjia订单接口)" />
     <MESSAGE value="order is ok" />
     <MESSAGE value="master is ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="master is ok" />
+    <MESSAGE value="template is ok,next is recommend" />
+    <option name="LAST_COMMIT_MESSAGE" value="template is ok,next is recommend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
