@@ -34,7 +34,7 @@ public class RecommendController {
         Gson gosn = new Gson();
         Recommend model = gosn.fromJson(json, Recommend.class);
         repository.save(model);
-        return ReturnUtils.getResutlt("saveRecommendSuccess","200");
+        return ReturnUtils.getResutlt("saveRecommendSuccess", "200");
     }
 
     @RequestMapping(value = "/queryRecommendByUniqueNumber", method = RequestMethod.POST)
@@ -42,12 +42,7 @@ public class RecommendController {
     Recommend queryRecommend(@RequestParam(value = "RecommendUniqueNumber", required = true) long uniqueNumber) {
 
         logger.debug("RecommendUniqueNumber", "" + uniqueNumber);
-
-        if (null == repository.getRecommendByUniqueNumber(uniqueNumber)) {
-            return new Recommend();
-        } else {
-            return repository.getRecommendByUniqueNumber(uniqueNumber);
-        }
+        return repository.getRecommendByUniqueNumber(uniqueNumber);
     }
 
     @GetMapping(path = "/queryAllRecommend")
@@ -56,12 +51,11 @@ public class RecommendController {
 
         List<Recommend> list = new ArrayList<Recommend>();
         Iterator<Recommend> iterator = repository.findAll().iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             list.add(iterator.next());
         }
         return list;
     }
-
 
 
 }
